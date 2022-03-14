@@ -26,3 +26,8 @@ jobs:
       - name: Show Directory Bash
         run: pwd
         shell: bash
+  run-linux-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker container ls
+        run: docker container ls
