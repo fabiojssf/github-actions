@@ -9,3 +9,13 @@ jobs:
         uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: "Fábio José"
+      - name: list Directory 1
+        run: |
+          pwd
+          ls -a
+      - name: github actions checkout
+        uses: actions/checkout@v3
+      - name: list Directory 2
+        run: |
+          pwd
+          ls -a
