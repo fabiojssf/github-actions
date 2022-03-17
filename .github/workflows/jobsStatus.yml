@@ -12,10 +12,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+      
       - name: Success
         if: success()
         run: |
           echo "Anterior executou com sucesso"
+          node -v
+          
       - name: Failure
         if: always()
         run: |
