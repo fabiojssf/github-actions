@@ -7,13 +7,13 @@ jobs:
     steps:
       - name : Default node version
         run: node -v
-        
+
       - name: Change node version
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Sucess
-        if: sucess()
+      - name: Success
+        if: success()
         run: |
           echo "Anterior executou com sucesso"
       - name: Failure
