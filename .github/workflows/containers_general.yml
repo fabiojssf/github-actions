@@ -1,0 +1,17 @@
+name: Work with containers
+on:
+  push:
+jobs:
+  container-docker:
+    runs-on: ubuntu-latest
+    container:
+      image: nginx:latest
+    steps:
+      - name: nginx version latest
+        run: nginx -v
+
+      - name: nginx version 1.21.6
+        uses: docker://nginx:1.21.6
+        run: nginx -v
+
+      
