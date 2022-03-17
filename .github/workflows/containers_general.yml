@@ -14,8 +14,6 @@ jobs:
 
       - name: use nginx docker version 1.20.2
         uses: docker://nginx:1.20.2
-
-      - name: nginx docker version 1.20.2
-        run: nginx -v
-
-      
+        with:
+          entrypoint: /usr/sbin/nginx
+          args: -v
