@@ -8,7 +8,9 @@ jobs:
       image: nginx:latest
     steps:
       - name: nginx docker default version latest
-        run: nginx -v
+        run: |
+          nginx -v
+          type -a nginx
 
       - name: use nginx docker version 1.20.2
         uses: docker://nginx:1.20.2
