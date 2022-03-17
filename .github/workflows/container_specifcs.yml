@@ -7,10 +7,9 @@ jobs:
     services:
       wordpress:
         image: wordpress
-        restart: always
         ports:
           - 8080:80
-        environment:
+        env:
           WORDPRESS_DB_HOST: db
           WORDPRESS_DB_USER: deliomed
           WORDPRESS_DB_PASSWORD: dkf9x898983usha0dmk92sX
@@ -21,8 +20,7 @@ jobs:
 
       db:
         image: mysql:5.7
-        restart: always
-        environment:
+        env:
           MYSQL_DATABASE: wordpress
           MYSQL_USER: deliomed
           MYSQL_PASSWORD: dkf9x898983usha0dmk92sX

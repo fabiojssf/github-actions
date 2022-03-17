@@ -1,6 +1,7 @@
 name: Work with containers
 on:
-  push:
+#  push:
+  pull_request:
 jobs:
   container-docker:
     runs-on: ubuntu-latest
