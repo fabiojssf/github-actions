@@ -18,8 +18,8 @@ jobs:
         run: |
           echo "Anterior executou com sucesso"
           node -v
-          
+
       - name: Failure
-        if: always()
+        if: failure()
         run: |
-          echo "Estou sempre executando"
+          echo "Estou sempre executando mesmo em falha"
