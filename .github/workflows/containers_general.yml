@@ -10,10 +10,10 @@ jobs:
       - name: nginx docker default version latest
         run: nginx -v
 
-      - name: use nginx docker version 1.21.6
-        uses: docker://nginx:1.21.6
+      - name: use nginx docker version 1.20.2
+        uses: docker://nginx:1.20.2
 
-      - name: nginx docker version 1.21.6
+      - name: nginx docker version 1.20.2
         run: nginx -v
 
       
