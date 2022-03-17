@@ -15,7 +15,7 @@ jobs:
           WORDPRESS_DB_PASSWORD: dkf9x898983usha0dmk92sX
           WORDPRESS_DB_NAME: wordpress
         volumes:
-          - ./wordpress:/var/www/html
+          - $PWD/wordpress:/var/www/html
       db:
         image: mysql:5.7
         env:
@@ -24,7 +24,7 @@ jobs:
           MYSQL_PASSWORD: dkf9x898983usha0dmk92sX
           MYSQL_RANDOM_ROOT_PASSWORD: '1'
         volumes:
-          - ./db:/var/lib/mysql
+          - $PWD/db:/var/lib/mysql
     steps:
       - name: get init page wordpress
         run: curl http://localhost:8080
