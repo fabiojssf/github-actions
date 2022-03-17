@@ -8,6 +8,12 @@ jobs:
       - name: Jobs Failure
         run: |
           eccho "teste Failure"
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+        run:
+          node -v
+
       - name: Sucess
         if: sucess()
         run: |

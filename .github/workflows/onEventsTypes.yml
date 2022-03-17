@@ -1,6 +1,6 @@
 name: On Events Types
 on:
-  push:
+  #push:
   pull_request:
     types: [closed,reopened,assigned,opened]
 jobs:
