@@ -1,0 +1,18 @@
+name: Jobs Status
+on: [push]
+
+jobs:
+  jobs-status-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Jobs Failure
+        run: |
+          eccho "teste Failure"
+      - name: Sucess
+        if: sucess()
+        run: |
+          echo "Anterior executou com sucesso"
+      - name: Failure
+        if: always()
+        run: |
+          echo "Estou sempre executando"

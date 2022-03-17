@@ -1,0 +1,13 @@
+name: On Events Types
+on:
+  push:
+  pull_request:
+    types: [closed,reopened,assigned,opened]
+jobs:
+  github-actions-teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        run: |
+          ls
+          pwd
