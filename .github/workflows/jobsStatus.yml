@@ -6,12 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Jobs Failure
+        run: node -v
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-        run:
-          node -v
-
       - name: Sucess
         if: sucess()
         run: |
