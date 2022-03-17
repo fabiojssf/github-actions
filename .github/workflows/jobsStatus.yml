@@ -5,8 +5,10 @@ jobs:
   jobs-status-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Jobs Failure
+      - name : Default node version
         run: node -v
+        
+      - name: Change node version
         uses: actions/setup-node@v2
         with:
           node-version: '14'
