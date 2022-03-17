@@ -16,7 +16,7 @@ jobs:
       - name: Success
         if: success()
         run: |
-          echo "Anterior executou com sucesso"
+          eccho "Anterior executou com sucesso"
           node -v
 
       - name: Failure
