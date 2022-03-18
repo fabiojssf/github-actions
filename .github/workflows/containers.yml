@@ -5,14 +5,14 @@ jobs:
   jobs-docker:
     runs-on: ubuntu-latest
     steps:
-      - name: image nginx
+      - name: image nginx and list version
         uses: docker://nginx:latest
+        with:
+          entrypoint: nginx
+          args: -v
       
-      - name: List version nxginx
-        run: nginx -v
-
-      - name: image node
+      - name: image node and list version
         uses: docker://node:lts-alpine3.15
-
-      - name: List version node
-        run: node -v
+        with:
+          entrypoint: node
+          args: -v
