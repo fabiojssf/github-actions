@@ -1,6 +1,6 @@
 name: Work with Container specifs
 on:
-  push:
+  pull_request:
 jobs:
   example-docker-compose:
     runs-on: ubuntu-latest
